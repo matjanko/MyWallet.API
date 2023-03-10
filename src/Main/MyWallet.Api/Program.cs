@@ -1,11 +1,13 @@
-using MyWallet.Shared.Infrastructure;
+using MyWallet.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddInfrastructure(builder.Configuration);
+var configuration = builder.Configuration;
+
+builder.Services.AddInfrastructure(configuration);
 
 
 var app = builder.Build();
-app.UseInfrastructure(builder.Configuration);
+app.UseInfrastructure(configuration);
 
 app.MapGet("/", () => "Hello World!");
 

@@ -1,11 +1,15 @@
-﻿namespace MyWallet.Shared.Infrastructure.Swagger;
+﻿
+using MyWallet.Abstractions.Options;
 
-public class SwaggerOptions
+namespace MyWallet.Infrastructure.Swagger;
+
+public class SwaggerOptions : IOptions
 {
-    public const string Swagger = "Swagger";
+    public string SectionName => "Swagger";
 
     public string Name { get; set; } = string.Empty;
     public string Title { get; set; } = string.Empty;
     public string Version { get; set; } = string.Empty;
     public string Prefix { get; set; } = string.Empty;
+    
 }
