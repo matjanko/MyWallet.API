@@ -7,8 +7,7 @@ builder.Services.AddInfrastructure(configuration);
 
 
 var app = builder.Build();
-app.UseInfrastructure(configuration);
-
+app.UseInfrastructure(app.Environment, configuration);
 app.MapGet("/", () => "Hello World!");
 
 app.Run();
