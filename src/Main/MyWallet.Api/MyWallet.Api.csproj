@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Modules\Expenses\MyWallet.Expenses.Api\MyWallet.Expenses.Api.csproj" />
       <ProjectReference Include="..\..\Shared\MyWallet.Infrastructure\MyWallet.Infrastructure.csproj" />
     </ItemGroup>
 
