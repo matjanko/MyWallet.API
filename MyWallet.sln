@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A8408AF4-F7C4-4F5F-A75B-37D69627F5FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main", "Main", "{A9B842B1-4499-4889-A2B5-6E34F432D66A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{EB89D40D-60C0-481E-A6BF-3C83DB04AD5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{91A9D4B2-81ED-4C7D-9232-6205878B9E1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWallet.Api", "src\Main\MyWallet.Api\MyWallet.Api.csproj", "{AD960D14-213D-4218-94E7-85C8DA3BBFE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A9B842B1-4499-4889-A2B5-6E34F432D66A} = {A8408AF4-F7C4-4F5F-A75B-37D69627F5FE}
+		{EB89D40D-60C0-481E-A6BF-3C83DB04AD5A} = {A8408AF4-F7C4-4F5F-A75B-37D69627F5FE}
+		{91A9D4B2-81ED-4C7D-9232-6205878B9E1A} = {A8408AF4-F7C4-4F5F-A75B-37D69627F5FE}
+		{AD960D14-213D-4218-94E7-85C8DA3BBFE3} = {A9B842B1-4499-4889-A2B5-6E34F432D66A}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD960D14-213D-4218-94E7-85C8DA3BBFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD960D14-213D-4218-94E7-85C8DA3BBFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD960D14-213D-4218-94E7-85C8DA3BBFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD960D14-213D-4218-94E7-85C8DA3BBFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
