@@ -6,4 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\Shared\MyWallet.Infrastructure\MyWallet.Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>
