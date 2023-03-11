@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace MyWallet.Debts.Api.Controllers;
 
@@ -7,16 +8,10 @@ namespace MyWallet.Debts.Api.Controllers;
 [Route("api/[controller]")]
 public class LoansController : ControllerBase
 {
-    /// <summary>
-    /// Creates a Loan.
-    /// </summary>
-    /// <returns></returns>
-    /// <response code="201">Returns the newly created loan</response>
-    /// <response code="400">Bad Request</response>
     [HttpPost]
-    [Produces("application/json")]
-    [ProducesResponseType(StatusCodes.Status201Created)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [SwaggerOperation("Creates a Loan")]
+    [SwaggerResponse(StatusCodes.Status201Created, "Returns the newly created loan")]
+    [SwaggerResponse(StatusCodes.Status400BadRequest, "Bad Request")]
     public async Task<IActionResult> PostAsync()
     {
         return Ok();

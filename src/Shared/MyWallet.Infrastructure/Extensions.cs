@@ -18,14 +18,12 @@ internal static class Extensions
         
         services.AddSwaggerGen(options =>
         {
+            options.EnableAnnotations();
             options.SwaggerDoc("v1", new OpenApiInfo
             {
                 Title = "MyWallet Api", 
                 Version = "v1"
             });
-            
-            const string xmlFilename = "MyWallet.Debts.Api.xml";
-            options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
         });
         
         services.Configure<RouteOptions>(options =>
@@ -44,8 +42,8 @@ internal static class Extensions
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
-                options.SwaggerEndpoint("/swagger/my-wallet/swagger.json", "MyWallet Api");
-                options.RoutePrefix = "api/";
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "MyWallet Api");
+                options.RoutePrefix = "api";
             });
         }
 
