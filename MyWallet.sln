@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWallet.Debts.Api", "src\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWallet.Debts.Core", "src\Modules\Debts\MyWallet.Debts.Core\MyWallet.Debts.Core.csproj", "{2F867C42-742A-4554-9BF1-5BBD9790A39A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWallet.Debts.Tests.EndToEnd", "src\Modules\Debts\MyWallet.Debts.Tests.EndToEnd\MyWallet.Debts.Tests.EndToEnd.csproj", "{5D6FEB9A-503A-4CDC-98A6-E097D547BBC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,7 @@ Global
 		{DDDDF547-F96D-4C58-8731-E35C76AA8B71} = {91A9D4B2-81ED-4C7D-9232-6205878B9E1A}
 		{65EA50C9-E1CF-4581-8646-B215F4F24181} = {DDDDF547-F96D-4C58-8731-E35C76AA8B71}
 		{2F867C42-742A-4554-9BF1-5BBD9790A39A} = {DDDDF547-F96D-4C58-8731-E35C76AA8B71}
+		{5D6FEB9A-503A-4CDC-98A6-E097D547BBC5} = {DDDDF547-F96D-4C58-8731-E35C76AA8B71}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AD960D14-213D-4218-94E7-85C8DA3BBFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -74,5 +77,9 @@ Global
 		{2F867C42-742A-4554-9BF1-5BBD9790A39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F867C42-742A-4554-9BF1-5BBD9790A39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F867C42-742A-4554-9BF1-5BBD9790A39A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D6FEB9A-503A-4CDC-98A6-E097D547BBC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D6FEB9A-503A-4CDC-98A6-E097D547BBC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D6FEB9A-503A-4CDC-98A6-E097D547BBC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D6FEB9A-503A-4CDC-98A6-E097D547BBC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
