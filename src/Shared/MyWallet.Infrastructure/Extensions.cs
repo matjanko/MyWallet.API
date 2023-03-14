@@ -1,11 +1,12 @@
 ﻿using System.Runtime.CompilerServices;
+using FastEndpoints;
+using FastEndpoints.Swagger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
 
 [assembly: InternalsVisibleTo("MyWallet.Api")]
 namespace MyWallet.Infrastructure;
@@ -15,16 +16,9 @@ internal static class Extensions
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddControllers();
+        services.AddFastEndpoints();
+        services.AddSwaggerDoc();
         
-        services.AddSwaggerGen(options =>
-        {
-            options.EnableAnnotations();
-            options.SwaggerDoc("v1", new OpenApiInfo
-            {
-                Title = "MyWallet Api", 
-                Version = "v1"
-            });
-        });
         
         services.Configure<RouteOptions>(options =>
         {
@@ -37,17 +31,16 @@ internal static class Extensions
     public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder app, 
         IWebHostEnvironment environment, IConfiguration configuration)
     {
+        app.UseRouting();
+        app.UseAuthorization();
+        app.UseFastEndpoints();
+        app.UseCors();
+        
         if (environment.IsDevelopment())
         {
-            app.UseSwagger();
-            app.UseSwaggerUI(options =>
-            {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "MyWallet Api");
-                options.RoutePrefix = "api";
-            });
+            app.UseSwaggerGen();
         }
-
-        app.UseRouting();
+        
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();

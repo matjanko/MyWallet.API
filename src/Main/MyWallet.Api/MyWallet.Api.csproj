@@ -7,8 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Modules\Debts\MyWallet.Debts.Api\MyWallet.Debts.Api.csproj" />
-      <ProjectReference Include="..\..\Modules\Expenses\MyWallet.Expenses.Api\MyWallet.Expenses.Api.csproj" />
+      <ProjectReference Include="..\..\Modules\Debts\MyWallet.Debts\MyWallet.Debts.csproj" />
       <ProjectReference Include="..\..\Shared\MyWallet.Infrastructure\MyWallet.Infrastructure.csproj" />
     </ItemGroup>
 
