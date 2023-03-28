@@ -7,11 +7,13 @@ namespace MyWallet.Infrastructure.Options;
 
 public static class Extensions
 {
-    public static T GetOptions<T>(this IServiceCollection services, IConfiguration configuration)
-        where T : IOptions, new() => GetOptions<T>(configuration);
-
-    public static T GetOptions<T>(this IApplicationBuilder app, IConfiguration configuration)
-        where T : IOptions, new() => GetOptions<T>(configuration);
+    public static T GetOptions<T>(this IServiceCollection services)
+        where T : IOptions, new()
+    {
+        using var provider = services.BuildServiceProvider();
+        var configuration = provider.GetRequiredService<IConfiguration>();
+        return GetOptions<T>(configuration);   
+    }
 
     private static T GetOptions<T>(IConfiguration configuration) where T : IOptions, new()
     {

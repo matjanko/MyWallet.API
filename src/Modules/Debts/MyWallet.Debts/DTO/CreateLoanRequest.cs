@@ -1,6 +1,9 @@
 ﻿namespace MyWallet.Debts.DTO;
 
-public class CreateLoanRequest
-{
-    public int Id { get; set; }
-}
+public record CreateLoanRequest(
+    int LenderId, 
+    string Description, 
+    decimal Principal,
+    decimal InterestRate, 
+    int LoanTermMonths
+);
